@@ -9,17 +9,22 @@
     tools:context=".MainActivity">
 
     <SearchView
-        android:Layout_width="match_parent"
-        android:Layout_height="wrap_parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:queryHint="Search"
         android:background="@color/white"
-        android:Layout_margin="20dp"/>
+        android:layout_margin="20dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+            
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,7 +37,7 @@
                     android:text="All"
                     android:textColor="@color/dark_gray"
                     android:textSize="18sp"
-                    android:background="@color/white"
+                    android:background="@drawable/bg_button_disabled"
                     android:layout_marginTop="20dp"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginBottom="20dp"/>
@@ -44,7 +49,7 @@
                     android:text="Chicken"
                     android:textColor="@color/dark_gray"
                     android:textSize="18sp"
-                    android:background="@color/white"
+                    android:background="@drawable/bg_button_disabled"
                     android:layout_marginTop="20dp"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginBottom="20dp"/>
@@ -56,7 +61,7 @@
                     android:text="Pizza"
                     android:textColor="@color/dark_gray"
                     android:textSize="18sp"
-                    android:background="@color/white"
+                    android:background="@drawable/bg_button_disabled"
                     android:layout_marginTop="20dp"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginBottom="20dp"/>
@@ -68,7 +73,7 @@
                     android:text="Kebab"
                     android:textColor="@color/dark_gray"
                     android:textSize="18sp"
-                    android:background="@color/white"
+                    android:background="@drawable/bg_button_disabled"
                     android:layout_marginTop="20dp"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginBottom="20dp"/>
@@ -76,6 +81,22 @@
 
             </LinearLayout>
 
+            </HorizontalScrollView>
         </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtListTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="All"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_margin="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
 
 </LinearLayout>

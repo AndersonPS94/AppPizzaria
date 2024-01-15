@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.appdepizzaria"
-        minSdk = 21
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -32,6 +32,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    viewBinding{
+        enable = true
     }
 }
 
